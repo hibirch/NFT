@@ -4,27 +4,11 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				// light-文字
-				regal: '#FFF',
-				// light-button-bg
-				'regal-50': '#E9ECEF',
-				// dark-text
 				'regal-100': '#EDEDED',
-				// dark-com-col light-hover
-				'regal-200': '#CED4DA',
-				// light-active
-				'regal-300': '#ADB5BD',
-				'regal-400': '#212529',
-				// dark-icon-col
-				'regal-500': '#363636',
-				// dark-hover || light-icon-col
-				'regal-600': '#272727',
-				// dark-active
-				'regal-700': '#222',
-				// dark-cpm-bg
-				'regal-800': '#1D1D1D',
-				// dark-bg-
-				'regal-900': '#121212',
+				'regal-200': '#121212',
+			},
+			backgroundImage: {
+				'mean-fruit': 'linear-gradient(120deg, #fccb90 0%, #d57eeb 100%)',
 			},
 		},
 		screens: {
