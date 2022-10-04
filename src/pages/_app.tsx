@@ -1,6 +1,7 @@
 // src/pages/_app.tsx
 import superjson from 'superjson'
 import {withTRPC} from '@trpc/next'
+import {ThemeProvider} from 'next-themes'
 import {SessionProvider} from 'next-auth/react'
 import {loggerLink} from '@trpc/client/links/loggerLink'
 import {httpBatchLink} from '@trpc/client/links/httpBatchLink'
@@ -25,9 +26,11 @@ const MyApp: React.FC<AppPropsWithLayout> = ({Component, pageProps: {session, ..
 	const getLayout = Component.getLayout ?? ((page) => page)
 
 	return getLayout(
-		<SessionProvider session={session}>
-			<Component {...pageProps} />
-		</SessionProvider>
+		<ThemeProvider attribute='class' themes={['light', 'dark']}>
+			<SessionProvider session={session}>
+				<Component {...pageProps} />
+			</SessionProvider>
+		</ThemeProvider>
 	)
 }
 const getBaseUrl = () => {
