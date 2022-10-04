@@ -14,7 +14,7 @@ const Layout: React.FC<LayoutProps> = ({children}) => {
 				<meta name='description' content='NFT-T3-ETH Demo' />
 				<link rel='icon' href='/favicon.ico' />
 			</Head>
-			<main>
+			<main className='text container mx-auto  min-h-screen  dark:bg-regal-200 dark:text-regal-100'>
 				<HomePageHeader />
 				{children}
 			</main>
